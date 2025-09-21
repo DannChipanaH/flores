@@ -1983,3 +1983,59 @@ body {
     opacity: 1;
   }
 }
+
+/* Estilos para el mensaje de amor */
+.love-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  text-align: center;
+  pointer-events: none;
+}
+
+.love-message h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 3.5vmin;
+  color: #fff;
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.2);
+  animation: messageGlow 3s ease-in-out infinite alternate;
+  margin: 0;
+  padding: 2vmin;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes messageGlow {
+  0% {
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 30px rgba(255, 255, 255, 0.4),
+      0 0 40px rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 
+      0 0 15px rgba(255, 255, 255, 1),
+      0 0 25px rgba(255, 255, 255, 0.8),
+      0 0 35px rgba(255, 255, 255, 0.6),
+      0 0 45px rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .love-message h1 {
+    font-size: 5vmin;
+    padding: 3vmin;
+  }
+}
